@@ -1,16 +1,10 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+// 非组件构建错误
+import { useFormItem } from '@arco-design/web-vue';
+const { eventHandlers } = useFormItem();
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
-  <a-space>
-    <a-button type="primary">Primary</a-button>
-    <a-button>Secondary</a-button>
-    <a-button type="dashed">Dashed</a-button>
-    <a-button type="outline">Outline</a-button>
-    <a-button type="text">Text</a-button>
-  </a-space>
+  <!-- 部分组件不支持按需加载 -->
+  <a-range-picker />
 </template>
